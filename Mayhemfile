@@ -1,5 +1,5 @@
-project: rnshah9/playground
-target: playground
+project: rnshah9/pyconcrete
+target: pyconcrete
 
 cmds:
   - cmd: /usr/local/bin/pyconcrete @@
