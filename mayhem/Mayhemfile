@@ -1,0 +1,10 @@
+project: pyconcrete
+target: pyconcrete
+
+# In-process libFuzzer harness over pyconcrete's native decrypt path
+# (_pyconcrete.decrypt_buffer -> fnDecryptBuffer). Replaces the archived raw-file CLI
+# target (`/usr/local/bin/pyconcrete @@`), which drove a whole embedded CPython per input
+# and produced ~no native edges. Same target NAME so Mayhem run history is preserved.
+cmds:
+  - cmd: /mayhem/pyconcrete
+    libfuzzer: true
